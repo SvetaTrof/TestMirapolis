@@ -1,0 +1,93 @@
+.tree__folder-name,
+.tree__file-name {
+  cursor: pointer;
+}
+
+.tree__list {
+  position: relative;
+  padding-left: 25px;
+  list-style: none;
+  line-height: 1.8;
+}
+
+.tree__list::before {
+  content: "";
+  position: absolute;
+  height: calc(100% - 14px);
+  width: 1px;
+  left: 10px;
+  top: 0;
+  background: #ccc;
+}
+
+.tree__folder,
+.tree__file {
+  position: relative;
+}
+
+.tree__folder::before,
+.tree__file::before {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 1px;
+  left: -14px;
+  top: 14px;
+  background: #ccc;
+}
+
+.tree__folder-name::before {
+  content: "\f07c";
+  margin-right: 5px;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #ffd283;
+}
+
+.tree__folder-name--close::before {
+  content: "\f07b";
+}
+
+.tree__folder-name {
+  position: relative;
+}
+
+.tree__folder-name::after {
+  position: absolute;
+  left: -20px;
+  top: 2px;
+  font: normal normal normal 11pt/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 11pt;
+  background: #fff;
+  color: #5c5c5c;
+}
+
+.tree__folder-name--close::after {
+  content: "\f196";
+}
+
+.tree__folder-name--open::after {
+  content: "\f147";
+}
+
+.tree__file-name::before {
+  content: "\f0f6";
+  margin-right: 5px;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #b1b1b1;
+}
+
+.tree__list--close {
+  display: none;
+}
