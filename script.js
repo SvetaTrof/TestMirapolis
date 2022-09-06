@@ -1,10 +1,10 @@
-$.getJSON('project.json', function(data) {
+$(document).ready(function(){
   var ul = $("<ul class='tree__list'></ul>");
   $(".tree").append(ul);
   buildTree(data, ul);
 
   setEvents();
-});
+ });
 
 function buildTree(data, parentDom) {
   for(var i=0; i<data.length;i++){
@@ -31,4 +31,5 @@ function setEvents(){
     $(this).next(".tree__list").toggleClass("tree__list--open");
   });
 }
+
 

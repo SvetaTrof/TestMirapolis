@@ -1,4 +1,4 @@
-[
+var data = [
   {
     "name": "Folder 1",
     "status": "open",
